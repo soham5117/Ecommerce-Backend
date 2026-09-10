@@ -1,5 +1,18 @@
+#server:
+#  port: 8080
+#
+#spring:
+#  application:
+#    name: ecommerce-backend
+#
+#  data:
+#    mongodb:
+#      uri: mongodb+srv://gaikwadsoham5117_db_user:9gexBk1UURsrvZrs@salesdashboard.hfwibkb.mongodb.net/SalesDashboard?appName=SalesDashboard
+#app:
+#  seed-data: true
+
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 spring:
   application:
@@ -7,6 +20,7 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb+srv://gaikwadsoham5117_db_user:9gexBk1UURsrvZrs@salesdashboard.hfwibkb.mongodb.net/SalesDashboard?appName=SalesDashboard
+      uri: ${MONGODB_URI}
+
 app:
   seed-data: true
